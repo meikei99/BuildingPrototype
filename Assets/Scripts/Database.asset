@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a858f4764293c4c418ea097c13b6e5b2, type: 3}
+  m_Name: Database
+  m_EditorClassIdentifier: 
+  objectsData:
+  - <Name>k__BackingField: Chair
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 2, y: 2}
+    <Prefab>k__BackingField: {fileID: 6389119958225036972, guid: f5e5f9f2d090af748a98ad6a2a24b314, type: 3}
+    <Cost>k__BackingField: 20
+  - <Name>k__BackingField: Pillar
+    <ID>k__BackingField: 1
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 3754699775810007389, guid: 0b748cd042b6d474c807828266387db5, type: 3}
+    <Cost>k__BackingField: 50
+  - <Name>k__BackingField: Stool
+    <ID>k__BackingField: 2
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 7322681602820981185, guid: c6c417f8dcc25654ba83bab9d50ce904, type: 3}
+    <Cost>k__BackingField: 20
+  - <Name>k__BackingField: Table
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 3, y: 2}
+    <Prefab>k__BackingField: {fileID: 8584635915508694612, guid: 9c1fbb2efbceeb94692827dd71dcdb9f, type: 3}
+    <Cost>k__BackingField: 100
+  - <Name>k__BackingField: Tiles
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 2, y: 2}
+    <Prefab>k__BackingField: {fileID: 5699129533007092972, guid: a6e7f7c83805ee44f95de8b426932501, type: 3}
+    <Cost>k__BackingField: 10

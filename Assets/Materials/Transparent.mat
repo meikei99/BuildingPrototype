@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grid
-  m_Shader: {fileID: -6465566751694194690, guid: 1dc5a56539df5a846bd3306072dd2121, type: 3}
+  m_Name: Transparent
+  m_Shader: {fileID: -6465566751694194690, guid: 9965b6fe2651f744e937dd5bdbc689fd, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -74,16 +74,13 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Thickness: 0.197
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
-    - _DefaultScale: {r: 10, g: 10, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.78039217}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _size: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &4113385038754195089
+--- !u!114 &3214038511215330306
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

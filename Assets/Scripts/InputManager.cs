@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
@@ -16,16 +17,28 @@ public class InputManager : MonoBehaviour
 
     public event Action OnClicked, OnExit;
 
+    // Reference to the UI button
+    public Button closeButton;
+    public Button closeButton2;
+
+    private void Start()
+    {
+        // Subscribe to the button's click event
+        closeButton.onClick.AddListener(OnCloseButtonClicked);
+        closeButton2.onClick.AddListener(OnCloseButtonClicked);
+    }
+
+    private void OnCloseButtonClicked()
+    {
+        // Invoke the OnExit event when the button is clicked
+        OnExit?.Invoke();
+    }
     private void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
             OnClicked?.Invoke();
-        }
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            OnExit?.Invoke();
-        }
+        }      
     }
 
     public bool IsPointerOverUI()

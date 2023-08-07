@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +5,7 @@ using UnityEngine;
 public class ObjectPlacer : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> placedGameObjects = new();
+    private List<GameObject> placedGameObjects = new List<GameObject>();
 
     public int PlaceObject(GameObject prefab, Vector3 position)
     {
@@ -16,12 +15,13 @@ public class ObjectPlacer : MonoBehaviour
         return placedGameObjects.Count - 1;
     }
 
-    public void RemoveObjectAt(int gameObjectIndex)
+    internal void RemoveObjectAt(int gameObjectIndex)
     {
-        if (placedGameObjects.Count <= gameObjectIndex
-            || placedGameObjects[gameObjectIndex] == null)
-            return;
-        Destroy(placedGameObjects[gameObjectIndex]);
-        placedGameObjects[gameObjectIndex] = null;
+        if (gameObjectIndex >= 0 && gameObjectIndex < placedGameObjects.Count)
+        {
+            GameObject removedObject = placedGameObjects[gameObjectIndex];
+            placedGameObjects.RemoveAt(gameObjectIndex);
+            Destroy(removedObject);
+        }
     }
 }

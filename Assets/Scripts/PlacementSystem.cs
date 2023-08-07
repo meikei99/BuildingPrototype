@@ -74,6 +74,21 @@ public class PlacementSystem : MonoBehaviour
         inputManager.OnExit += StopPlacement;
     }
 
+    public void StartRemoving()
+    {
+        StopPlacement();
+        gridVisualization.SetActive(true);
+        buildingState = new RemovingState(grid,
+                                          preview,
+                                          floorData,
+                                          furnitureData,
+                                          objectPlacer,
+                                          soundFeedback);
+        inputManager.OnClicked += PlaceStructure;
+        inputManager.OnExit += StopPlacement;
+    }
+
+
     private void PlaceStructure()
     {
         if (inputManager.IsPointerOverUI())
@@ -125,8 +140,7 @@ public class PlacementSystem : MonoBehaviour
         {
             buildingState.UpdateState(gridPosition);
             lastDetectedPosition= gridPosition;
-        }
-        
+        }     
     }
 
     public void DeductMoney(int amount)

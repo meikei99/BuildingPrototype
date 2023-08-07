@@ -14,7 +14,7 @@ public class PlacementState : IBuildingState
     ObjectPlacer objectPlacer;
     SoundFeedback soundFeedback;
     private PlacementSystem placementSystem;
-    private PreviewSystem preview;
+    
 
     public PlacementState(int iD,
                           Grid grid,
@@ -66,7 +66,7 @@ public class PlacementState : IBuildingState
         int index = objectPlacer.PlaceObject(database.objectsData[selectedObjectIndex].Prefab,
             grid.CellToWorld(gridPosition));
 
-        GridData selectedData = database.objectsData[selectedObjectIndex].ID == 0 ?
+        GridData selectedData = database.objectsData[selectedObjectIndex].ID == 4 ?
             floorData :
             furnitureData;
         selectedData.AddObjectAt(gridPosition,
@@ -82,7 +82,7 @@ public class PlacementState : IBuildingState
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedObjectIndex)
     {
-        GridData selectedData = database.objectsData[selectedObjectIndex].ID == 0 ?
+        GridData selectedData = database.objectsData[selectedObjectIndex].ID == 4 ?
             floorData :
             furnitureData;
 
